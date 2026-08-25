@@ -305,30 +305,26 @@ const ESG_Q={t:"One final question: would you like your investments to incorpora
 ]};
 
 const PROFS={
-Low:{id:1,k:"Low",label:"Low Risk",sub:"Defensive",tag:"Capital preservation above all else",
-desc:"Your responses indicate that protecting your capital is the overriding priority. You have a low tolerance for investment losses, and your financial circumstances support a defensive approach. Your portfolio should focus primarily on capital stability and income, with very limited exposure to volatile assets.",
-alloc:[{n:"Cash & Money Market",p:25},{n:"Bonds & Gilts",p:55},{n:"Equities",p:15},{n:"Alternatives",p:5}],
-sy:"+8 to +12%",ret:"2-4%",wy:"-3 to -6%",sc:{b:134000,g:148000},band:"0-24"},
-Cautious:{id:2,k:"Cautious",label:"Cautious",sub:"Cautious Growth",tag:"Steady progress, protected foundation",
-desc:"You seek modest growth with a strong emphasis on protecting your capital. Some equity exposure is appropriate to generate returns above inflation, but your portfolio should remain predominantly in lower-risk assets. You are prepared for minor fluctuations but would find significant losses deeply uncomfortable.",
-alloc:[{n:"Cash & Money Market",p:25},{n:"Bonds & Gilts",p:50},{n:"Equities",p:20},{n:"Alternatives",p:5}],
-sy:"+10 to +14%",ret:"4-5%",wy:"-8 to -14%",sc:{b:148000,g:163000},band:"0-20"},
-ModeratelyCautious:{id:3,k:"ModeratelyCautious",label:"Moderately Cautious",sub:"Cautious Growth",tag:"Stability-tilted, with modest growth",
-desc:"You seek stability with modest growth to stay ahead of inflation. You prefer predominantly lower-risk assets but are open to a measured equity allocation. Some fluctuation is acceptable, but significant losses would be uncomfortable.",
-alloc:[{n:"Cash & Money Market",p:12},{n:"Bonds & Gilts",p:45},{n:"Equities",p:35},{n:"Alternatives",p:8}],
-sy:"+14 to +19%",ret:"5-6%",wy:"-12 to -18%",sc:{b:163000,g:180000},band:"21-40"},
-Balanced:{id:4,k:"Balanced",label:"Balanced",sub:"Balanced Growth",tag:"Growth and stability in equal measure",
+Low:{id:1,k:"Low",label:"Low Risk",sub:"Defensive",tag:"Capital protection first",
+desc:"Your responses indicate that protecting your capital is the overriding priority. You have a low tolerance for investment losses, and your financial circumstances support a defensive approach. Your portfolio should focus primarily on capital stability and income, with lower growth accepted in exchange for greater stability.",
+alloc:[{n:"Cash & Money Market",p:20},{n:"Bonds & Gilts",p:55},{n:"Equities",p:20},{n:"Alternatives",p:5}],
+sy:"+10 to +14%",ret:"4-5%",wy:"-8 to -12%",sc:{b:148000,g:163000},band:"0-24"},
+Cautious:{id:2,k:"Cautious",label:"Cautious",sub:"Cautious Growth",tag:"Stability-tilted, with modest growth",
+desc:"You seek modest growth with a strong emphasis on protecting your capital. A measured equity allocation is appropriate to stay ahead of inflation, but your portfolio should remain tilted towards lower-risk assets. You are prepared for some fluctuation but would find significant losses uncomfortable.",
+alloc:[{n:"Cash & Money Market",p:12},{n:"Bonds & Gilts",p:43},{n:"Equities",p:40},{n:"Alternatives",p:5}],
+sy:"+15 to +20%",ret:"5-6%",wy:"-13 to -18%",sc:{b:163000,g:180000},band:"25-44"},
+Balanced:{id:3,k:"Balanced",label:"Balanced",sub:"Balanced Growth",tag:"An even footing between growth and protection",
 desc:"You are comfortable with moderate investment risk in pursuit of meaningful long-term returns. A diversified mix of equities and bonds suits your objectives. You understand that values will fluctuate and have both the financial capacity and temperament to stay invested through periods of volatility.",
-alloc:[{n:"Cash & Money Market",p:8},{n:"Bonds & Gilts",p:30},{n:"Equities",p:55},{n:"Alternatives",p:7}],
-sy:"+19 to +26%",ret:"6-7%",wy:"-18 to -25%",sc:{b:179000,g:196000},band:"41-60"},
-Adventurous:{id:5,k:"Adventurous",label:"Adventurous",sub:"Adventurous Growth",tag:"Growth-focused, eyes open to risk",
+alloc:[{n:"Cash & Money Market",p:8},{n:"Bonds & Gilts",p:25},{n:"Equities",p:60},{n:"Alternatives",p:7}],
+sy:"+20 to +27%",ret:"6-7%",wy:"-19 to -25%",sc:{b:179000,g:196000},band:"45-64"},
+Adventurous:{id:4,k:"Adventurous",label:"Adventurous",sub:"Adventurous Growth",tag:"Growth-led, accepting meaningful short-term falls",
 desc:"You have a high tolerance for risk and a clear focus on long-term growth. You are comfortable with significant short-term fluctuations and understand these are part of achieving stronger long-term returns. Your portfolio will be predominantly invested in equities with limited defensive allocation.",
-alloc:[{n:"Cash & Money Market",p:5},{n:"Bonds & Gilts",p:15},{n:"Equities",p:70},{n:"Alternatives",p:10}],
-sy:"+26 to +34%",ret:"7-8%",wy:"-25 to -35%",sc:{b:216000,g:240000},band:"61-80"},
-High:{id:6,k:"High",label:"High Risk",sub:"Aggressive Growth",tag:"Maximum growth, maximum resilience required",
+alloc:[{n:"Cash & Money Market",p:5},{n:"Bonds & Gilts",p:9},{n:"Equities",p:78},{n:"Alternatives",p:8}],
+sy:"+29 to +38%",ret:"7-8%",wy:"-27 to -33%",sc:{b:216000,g:240000},band:"65-82"},
+High:{id:5,k:"High",label:"High Risk",sub:"Aggressive Growth",tag:"Maximum growth focus; significant volatility expected",
 desc:"You have the highest tolerance for risk and are focused on maximising long-term growth. You accept the real possibility of significant short-term losses  -  including losses exceeding 35% in adverse conditions  -  and have the financial resilience and psychological temperament to remain invested through severely volatile periods.",
-alloc:[{n:"Cash & Money Market",p:5},{n:"Bonds & Gilts",p:5},{n:"Equities",p:80},{n:"Alternatives",p:10}],
-sy:"+30 to +42%",ret:"8-9%",wy:"-35 to -45%",sc:{b:259000,g:285000},band:"81-100"}
+alloc:[{n:"Cash & Money Market",p:3},{n:"Bonds & Gilts",p:0},{n:"Equities",p:92},{n:"Alternatives",p:5}],
+sy:"+33 to +44%",ret:"8-9%",wy:"-35 to -42%",sc:{b:259000,g:285000},band:"83-100"}
 };
 
 const WT={A:1.4,B:1.2,C:1.5,D:1.0,E:1.0};
@@ -352,13 +348,13 @@ function calc(){
 
 function getProf(tot,rawB){
   let k;
-  if(tot<=20)k="Cautious";
-  else if(tot<=40)k="ModeratelyCautious";
-  else if(tot<=60)k="Balanced";
-  else if(tot<=80)k="Adventurous";
+  if(tot<=24)k="Low";
+  else if(tot<=44)k="Cautious";
+  else if(tot<=64)k="Balanced";
+  else if(tot<=82)k="Adventurous";
   else k="High";
-  const capped=["Balanced","Adventurous","High"].includes(k)&&rawB<=10;
-  if(capped)k="Cautious";
+  const capped=["Cautious","Balanced","Adventurous","High"].includes(k)&&rawB<=10;
+  if(capped)k="Low";
   return{k,capped};
 }
 
@@ -531,7 +527,7 @@ function renderResults(){
     <div class="profile-name">${p.label}</div>
     <div class="profile-tag">${p.tag}</div>
     <div class="profile-desc">${p.desc}</div>
-    ${capped?`<div class="cap-alert">Your overall score indicated a higher profile, but your capacity for loss responses suggest a more conservative approach is appropriate. Your profile has been adjusted to Cautious accordingly.</div>`:""}
+    ${capped?`<div class="cap-alert">Your overall score indicated a higher profile, but your capacity for loss responses suggest a more conservative approach is appropriate. Your profile has been adjusted to Low Risk accordingly.</div>`:""}
   </div>
 
   <div class="section-card">
@@ -741,7 +737,7 @@ function buildPDF(){
 
   if(capped){
     doc.setFillColor(255,240,241); doc.setDrawColor(...coral);
-    const cl=doc.splitTextToSize("Capacity for loss adjustment: your overall score indicated a higher profile, but your capacity-for-loss responses suggest a more conservative approach. Your profile has been set to Cautious in line with FCA guidance.", W-2*M-24);
+    const cl=doc.splitTextToSize("Capacity for loss adjustment: your overall score indicated a higher profile, but your capacity-for-loss responses suggest a more conservative approach. Your profile has been set to Low Risk in line with FCA guidance.", W-2*M-24);
     const ch=cl.length*12+20;
     doc.roundedRect(M,y,W-2*M,ch,6,6,"FD");
     doc.setTextColor(...ink); doc.setFontSize(9); doc.text(cl, M+12, y+15); y+=ch+12;
@@ -1199,11 +1195,11 @@ function buildUnderstandingPDF(){
   doc.setFillColor(...navy); doc.rect(ML,y,tblW,0.7,"F"); y+=0.7;
 
   const bands=[
-    {bk:"Cautious",        label:"Cautious",           score:"Score 0-20", desc:"Capital protection first; lower growth accepted for greater stability.",  eq:20, alloc:[25,50,20,5],  best:"+10 to +14%", tgt:"4-5%", worst:"-8 to -14%"},
-    {bk:"ModeratelyCautious",label:"Moderately Cautious",score:"Score 21-40",desc:"Stability-tilted, with modest growth to stay ahead of inflation.",    eq:35, alloc:[12,45,35,8],  best:"+14 to +19%", tgt:"5-6%", worst:"-12 to -18%"},
-    {bk:"Balanced",        label:"Balanced",            score:"Score 41-60",desc:"An even footing between growth and protection.",                         eq:55, alloc:[8,30,55,7],   best:"+19 to +26%", tgt:"6-7%", worst:"-18 to -25%"},
-    {bk:"Adventurous",     label:"Adventurous",         score:"Score 61-80",desc:"Growth-led, accepting meaningful short-term falls along the way.",       eq:70, alloc:[5,15,70,10],  best:"+26 to +34%", tgt:"7-8%", worst:"-25 to -35%"},
-    {bk:"High",            label:"High",                score:"Score 81-100",desc:"Maximum growth focus; significant volatility expected.",                eq:80, alloc:[5,5,80,10],   best:"+30 to +42%", tgt:"8-9%", worst:"-35 to -45%"},
+    {bk:"Low",         label:"Low Risk",    score:"Score 0-24",  desc:"Capital protection first; lower growth accepted for greater stability.", eq:20, alloc:[20,55,20,5],  best:"+10 to +14%", tgt:"4-5%", worst:"-8 to -12%"},
+    {bk:"Cautious",    label:"Cautious",    score:"Score 25-44", desc:"Stability-tilted, with modest growth to stay ahead of inflation.",       eq:40, alloc:[12,43,40,5],  best:"+15 to +20%", tgt:"5-6%", worst:"-13 to -18%"},
+    {bk:"Balanced",    label:"Balanced",    score:"Score 45-64", desc:"An even footing between growth and protection.",                         eq:60, alloc:[8,25,60,7],   best:"+20 to +27%", tgt:"6-7%", worst:"-19 to -25%"},
+    {bk:"Adventurous", label:"Adventurous", score:"Score 65-82", desc:"Growth-led, accepting meaningful short-term falls along the way.",       eq:78, alloc:[5,9,78,8],   best:"+29 to +38%", tgt:"7-8%", worst:"-27 to -33%"},
+    {bk:"High",        label:"High Risk",   score:"Score 83-100",desc:"Maximum growth focus; significant volatility expected.",                eq:92, alloc:[3,0,92,5],   best:"+33 to +44%", tgt:"8-9%", worst:"-35 to -42%"},
   ];
 
   // Row heights from PDF: Cautious=64.5, others similar. High row taller (YOUR RESULT pill)
@@ -1660,7 +1656,7 @@ function downloadCompliancePDF(noSave){
     bodyText(ESG_Q.t);
     bodyText('Answer: '+(st.esg ? (ESG_Q.opts.find(o=>o.v===st.esg).t) : 'Not answered'));
     sectionHead('Capacity for Loss Override');
-    if(capped) bodyText('OVERRIDE APPLIED. The client raw Section B score was '+(raw.B||0)+' out of 25. A score of 10 or below triggers a mandatory downgrade to Cautious.');
+    if(capped) bodyText('OVERRIDE APPLIED. The client raw Section B score was '+(raw.B||0)+' out of 25. A score of 10 or below triggers a mandatory downgrade to Low Risk (grade 1).');
     else bodyText('No override applied. The client raw Section B score was '+(raw.B||0)+' out of 25, which is above the override threshold of 10.');
     sectionHead('Profile Rationale  -  '+(p?p.label:k));
     bodyText(p.desc || '');
